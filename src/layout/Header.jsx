@@ -1,8 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Jika scroll lebih dari 50px, ubah status jadi true
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Pasang event listener saat komponen muncul
+    window.addEventListener("scroll", handleScroll);
+
+    // Bersihkan event listener saat komponen hilang (cleanup)
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -16,10 +34,10 @@ export default function Header() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="icon icon-tabler icons-tabler-outline icon-tabler-book-2"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="icon icon-tabler icons-tabler-outline icon-tabler-book-2"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12" />
@@ -36,10 +54,10 @@ export default function Header() {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="icon icon-tabler icons-tabler-outline icon-tabler-book"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="icon icon-tabler icons-tabler-outline icon-tabler-book"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
@@ -51,8 +69,14 @@ export default function Header() {
   );
 
   return (
-    <header className=" text-white py-4 px-10 fixed w-full top-0 left-0 z-20 flex justify-between items-center">
-      <h1 className="text-lg md:text-2xl font-dynaPuff font-regular">Sarinah Ash-Shalihah</h1>
+    <header
+      className={` py-4 px-10 fixed w-full top-0 left-0 z-20 flex justify-between items-center transition-colors duration-300 ${
+        isScrolled ? "text-white bg-black/10" : "text-black"
+      }`}
+    >
+      <h1 className="text-lg md:text-2xl font-dynaPuff font-regular">
+        Sarinah Ash-Shalihah
+      </h1>
       <button onClick={toggleMenu} className="ml-auto cursor-pointer">
         {iconClose}
       </button>
@@ -64,7 +88,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
             transition={{ duration: 0.3 }}
-            className="bg-secondary text-white p-4 fixed w-[250px] rounded-bl-3xl pt-14 pl-10 top-0 right-0 z-20 flex flex-col items-start"
+            className="bg-secondary text-white p-4 fixed w-62.5 rounded-bl-3xl pt-14 pl-10 top-0 right-0 z-20 flex flex-col items-start"
           >
             <button onClick={toggleMenu} className="absolute top-4 right-4">
               {iconOpen}

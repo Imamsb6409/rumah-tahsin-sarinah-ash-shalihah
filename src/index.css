@@ -1,5 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* font from google */
+@theme {
+  --color-primary: #F6F0D7;
+  --color-secondary: #89986D;
+  --color-box: #B8C4A9;
+
+  --color-sub: #9CAB84;
+  --color-head: #89986D;
+
+  --font-dynaPuff: "DynaPuff", cursive;
+  --font-inter: "Inter", sans-serif;
+  --font-quicksand: "Quicksand", sans-serif;
+
+  --animate-marquee: marquee 15s linear infinite;
+  --animate-marquee-vertical: marqueeVertical 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeVertical {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

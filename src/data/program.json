@@ -1,0 +1,25 @@
+[{
+    "gambar": "program-1.svg",
+    "judul": "Belajar Alquran sesuai kaidah Tajwid",
+    "deskripsi": "Program Tahsin",
+    "link": "#"
+  },
+  {
+    "gambar": "program-2.svg",
+    "judul": "Program Tahfidz",
+    "deskripsi": "Program Tahfidz",
+    "link": "#"
+},
+{
+    "gambar": "program-3.svg",
+    "judul": "Program Tahsin & Tahfidz",
+    "deskripsi": "Program Tahsin & Tahfidz",
+    "link": "#"
+},
+{
+    "gambar": "program-4.svg",
+    "judul": "Program Tajwid",
+    "deskripsi": "Program Tajwid",
+    "link": "#"
+}
+]
