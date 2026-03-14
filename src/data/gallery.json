@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "nama": "Shilah Ukhuwah",
+    "deskripsi": "Muhadhoroh untuk memperkuat iman & tali persaudaraan",
+    "imageName": "shilah.png",
+    "layout": "md:col-span-2 md:row-span-1"
+  },
+  {
+    "id": 2,
+    "nama": "Belajar Tahsin",
+    "deskripsi": "Memperbaiki bacaan murid-murid",
+    "imageName": "tahsin.png",
+    "layout": "md:col-span-1 md:row-span-1"
+  },
+  {
+    "id": 3,
+    "nama": "Kegiatan Sosial",
+    "deskripsi": "Berbagi kebahagiaan bersama",
+    "imageName": "sosial.png",
+    "layout": "md:col-span-1 md:row-span-2"
+  },
+  {
+    "id": 4,
+    "nama": "Ifthar Jamai",
+    "deskripsi": "Undangan buka puasa bersama",
+    "imageName": "video-ifthar.mp4",
+    "isVideo": true,
+    "layout": "md:col-span-1 md:row-span-2"
+  },
+  {
+    "id": 5,
+    "nama": "Ramadhan Fun's",
+    "deskripsi": "Acara menyambut bulan suci",
+    "imageName": "ramadhan.png",
+    "layout": "md:col-span-1 md:row-span-1"
+  },
+  {
+    "id": 6,
+    "nama": "Penyerahan Sertifikat",
+    "deskripsi": "Apresiasi untuk para santri",
+    "imageName": "sertifikat.png",
+    "layout": "md:col-span-1 md:row-span-1"
+  }
+]

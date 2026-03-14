@@ -13,7 +13,7 @@ export default function Programsec() {
   };
 
   return (
-    <section className="bg-primary shadow-2xl min-h-screen text-head p-4 flex flex-col relative items-center">
+    <section className="bg-primary min-h-screen text-head p-4 flex flex-col relative items-center">
       <div className="bg-box/30 absolute -left-16 bottom-16 w-100 h-100 rotate-12"></div>
 
       <div className="font-dynaPuff text-center md:text-center text-head relative mt-15">
