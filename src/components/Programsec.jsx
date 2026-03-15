@@ -21,7 +21,7 @@ export default function Programsec() {
         <h1 className="text-6xl lg:text-8xl">SARINAH</h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
         {programData.map((program, index) => {
           const imgUrl = new URL(`../assets/${program.gambar}`, import.meta.url)
             .href;
@@ -29,14 +29,14 @@ export default function Programsec() {
           return (
             <div
               key={index}
-              className="bg-box/30 p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between relative cursor-pointer hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out "
+              className="bg-box/30 p-6 rounded-lg shadow-lg h flex flex-col items-center text-center justify-between relative cursor-pointer hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out "
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
               <img
                 src={imgUrl}
                 alt={program.judul}
-                className="w-full h-auto mb-4"
+                className="w-100 h-auto mb-4"
               />
               <div>
                 <h2 className="text-xl font-bold mb-2">{program.judul}</h2>

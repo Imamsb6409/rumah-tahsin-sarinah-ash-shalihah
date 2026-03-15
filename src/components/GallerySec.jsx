@@ -16,7 +16,7 @@ export default function GallerySec() {
       </div>
 
       {/* GRID SECTION */}
-      <div className="grid h-screen md:h-[110vh] w-full grid-cols-1 md:grid-cols-3 md:grid-rows-4 gap-4">
+      <div className="grid min-h-screen md:h-[110vh] w-full grid-cols-1 md:grid-cols-3 md:grid-rows-4 gap-4">
         {galleryData.map((item) => {
           // 1. Logika Layout
           let layoutClass = "";
@@ -36,7 +36,8 @@ export default function GallerySec() {
           return (
             <div
               key={item.id}
-              className={`relative min-h-50 overflow-hidden rounded-3xl border-4 border-[#7a8450] group ${layoutClass}`}
+              className={`relative min-h-50 overflow-hidden rounded-3xl border-4 border-[#7a8450] group ${layoutClass}
+              `}
             >
               {item.isVideo ? (
                 <video
@@ -57,7 +58,7 @@ export default function GallerySec() {
                 />
               )}
 
-              <div className="absolute inset-0 from-black/90 via-black/20 to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent  opacity-100" />
 
               <div className="absolute bottom-0 left-0 p-6 text-white translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="text-xl md:text-2xl font-bold leading-tight">

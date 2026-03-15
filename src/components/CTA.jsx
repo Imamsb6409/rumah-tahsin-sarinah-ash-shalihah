@@ -1,6 +1,6 @@
 export default function CTA() {
   return (
-    <div className="bg-box w-[95%] md:w-[90%] mx-auto py-8 md:py-12 px-6 md:px-12 rounded-[2rem] flex flex-col md:flex-row items-center justify-between gap-8 mb-12 shadow-inner">
+    <div className="bg-box w-[95%] min-h-70 md:w-[90%] mx-auto py-8 md:py-12 px-6 md:px-12 rounded-4xl flex flex-col md:flex-row items-center justify-between gap-8 mb-12 shadow-inner">
       {/* Bagian Teks */}
       <div className="w-full md:w-2/3 flex flex-col gap-4 text-center md:text-left">
         <h2 className="text-3xl md:text-4xl lg:text-4xl font-dynaPuff text-[#647050] tracking-wide leading-tight">

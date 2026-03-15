@@ -1,24 +1,24 @@
 [{
     "gambar": "program-1.svg",
-    "judul": "Belajar Alquran sesuai kaidah Tajwid",
+    "judul": "Setoran Al-Quran",
     "deskripsi": "Program Tahsin",
     "link": "#"
   },
   {
     "gambar": "program-2.svg",
-    "judul": "Program Tahfidz",
+    "judul": "Talaqqi Al-Quran",
     "deskripsi": "Program Tahfidz",
     "link": "#"
 },
 {
     "gambar": "program-3.svg",
-    "judul": "Program Tahsin & Tahfidz",
+    "judul": "Setoran Al-Quran",
     "deskripsi": "Program Tahsin & Tahfidz",
     "link": "#"
 },
 {
     "gambar": "program-4.svg",
-    "judul": "Program Tajwid",
+    "judul": "Doa Harian",
     "deskripsi": "Program Tajwid",
     "link": "#"
 }
