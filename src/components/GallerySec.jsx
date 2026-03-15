@@ -16,7 +16,7 @@ export default function GallerySec() {
       </div>
 
       {/* GRID SECTION */}
-      <div className="grid min-h-screen md:h-[110vh] w-full grid-cols-1 md:grid-cols-3 md:grid-rows-4 gap-4">
+      <div className="grid min-h-screen md:h-[110vh] w-full grid-cols-1 md:grid-cols-3 md:grid-rows-4 gap-4 mt-10">
         {galleryData.map((item) => {
           // 1. Logika Layout
           let layoutClass = "";

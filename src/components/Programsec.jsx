@@ -23,8 +23,7 @@ export default function Programsec() {
 
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
         {programData.map((program, index) => {
-          const imgUrl = new URL(`../assets/${program.gambar}`, import.meta.url)
-            .href;
+          const imgUrl = `/program-img/${program.gambar}`;
 
           return (
             <div

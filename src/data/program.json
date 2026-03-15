@@ -1,25 +1,25 @@
 [{
     "gambar": "program-1.svg",
-    "judul": "Setoran Al-Quran",
-    "deskripsi": "Program Tahsin",
+    "judul": "Membaca Al-Quran",
+    "deskripsi": "Membantu anak-anak untuk lancar membaca Al-Quran",
     "link": "#"
   },
   {
     "gambar": "program-2.svg",
     "judul": "Talaqqi Al-Quran",
-    "deskripsi": "Program Tahfidz",
+    "deskripsi": "Menalqinkan Al-Quran dengan metode talaqqi",
     "link": "#"
 },
 {
     "gambar": "program-3.svg",
     "judul": "Setoran Al-Quran",
-    "deskripsi": "Program Tahsin & Tahfidz",
+    "deskripsi": "Mengasah kemampuan mengingat bacaan Al-Quran dengan setoran rutin",
     "link": "#"
 },
 {
     "gambar": "program-4.svg",
     "judul": "Doa Harian",
-    "deskripsi": "Program Tajwid",
+    "deskripsi": "Mengajarkan anak-anak cara membaca doa harian dengan benar",
     "link": "#"
 }
 ]
