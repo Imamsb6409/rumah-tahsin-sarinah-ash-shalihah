@@ -1,4 +1,4 @@
-import HeroImg from "/hero-image-rumah-tahsin.png";
+import HeroImg from "/hero-image-rumah-tahsin.webp";
 
 export default function HeroSec() {
   const right = (
