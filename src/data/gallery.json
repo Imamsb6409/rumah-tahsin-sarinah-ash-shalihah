@@ -3,21 +3,21 @@
     "id": 1,
     "nama": "Shilah Ukhuwah",
     "deskripsi": "Muhadhoroh untuk memperkuat iman & tali persaudaraan",
-    "imageName": "shilah.png",
+    "imageName": "shilah.webp",
     "layout": "md:col-span-2 md:row-span-1"
   },
   {
     "id": 2,
     "nama": "Belajar Tahsin",
     "deskripsi": "Memperbaiki bacaan murid-murid",
-    "imageName": "tahsin.png",
+    "imageName": "tahsin.webp",
     "layout": "md:col-span-1 md:row-span-1"
   },
   {
     "id": 3,
     "nama": "Kegiatan Sosial",
     "deskripsi": "Berbagi kebahagiaan bersama",
-    "imageName": "sosial.png",
+    "imageName": "sosial.webp",
     "layout": "md:col-span-1 md:row-span-2"
   },
   {
@@ -32,14 +32,14 @@
     "id": 5,
     "nama": "Ramadhan Fun's",
     "deskripsi": "Acara menyambut bulan suci",
-    "imageName": "ramadhan.png",
+    "imageName": "ramadhan.webp",
     "layout": "md:col-span-1 md:row-span-1"
   },
   {
     "id": 6,
     "nama": "Penyerahan Sertifikat",
     "deskripsi": "Apresiasi untuk para santri",
-    "imageName": "sertifikat.png",
+    "imageName": "sertifikat.webp",
     "layout": "md:col-span-1 md:row-span-1"
   }
 ]
