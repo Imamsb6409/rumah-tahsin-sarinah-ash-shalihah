@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #F6F0D7;
-  --color-secondary: #89986D;
-  --color-box: #B8C4A9;
+  --color-primary: #f6f0d7;
+  --color-secondary: #89986d;
+  --color-box: #b8c4a9;
 
-  --color-sub: #9CAB84;
-  --color-head: #89986D;
+  --color-sub: #9cab84;
+  --color-head: #89986d;
 
   --font-dynaPuff: "DynaPuff", cursive;
   --font-inter: "Inter", sans-serif;
@@ -32,4 +32,8 @@
   100% {
     transform: translateY(-50%);
   }
+}
+
+* {
+  scroll-behavior: smooth;
 }

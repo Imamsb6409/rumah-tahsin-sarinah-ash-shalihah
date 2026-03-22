@@ -20,7 +20,7 @@ export default function HeroSec() {
   );
 
   return (
-    <section className="bg-primary relative">
+    <section id="home" className="bg-primary relative">
       <div className="">
         <img
           src={HeroImg}

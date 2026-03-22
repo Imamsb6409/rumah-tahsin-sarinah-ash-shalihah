@@ -13,7 +13,6 @@
         <Routes>
           <Route path='/' element={<App />} >
           <Route path='/' element={<Main />} />
-
           </Route>
         </Routes>
       </BrowserRouter>

@@ -57,14 +57,14 @@ export default function Header() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="icon icon-tabler icons-tabler-outline icon-tabler-book"
+      className="icon icon-tabler icons-tabler-outline icon-tabler-book cursor-pointer"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
       <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
       <path d="M3 6l0 13" />
       <path d="M12 6l0 13" />
-      <path d="M21 6l0 13" />
+      <path d="M21 6l0 13" />    
     </svg>
   );
 
@@ -77,8 +77,9 @@ export default function Header() {
       <h1 className="text-lg md:text-2xl font-dynaPuff font-regular">
         Sarinah Ash-Shalihah
       </h1>
-      <button onClick={toggleMenu} className="ml-auto cursor-pointer">
+      <button onClick={toggleMenu} className="ml-auto cursor-pointer flex flex-col items-center">
         {iconClose}
+        <span className="font-semibold text-sm -mt-2 font-dynaPuff">menu</span>
       </button>
 
       <AnimatePresence mode="wait">
@@ -101,7 +102,10 @@ export default function Header() {
                 <a href="#about">About</a>
               </li>
               <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out">
-                <a href="#services">Services</a>
+                <a href="#program">Program</a>
+              </li>
+              <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out">
+                <a href="#gallery">Gallery</a>
               </li>
               <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out ">
                 <a href="#contact">Contact</a>

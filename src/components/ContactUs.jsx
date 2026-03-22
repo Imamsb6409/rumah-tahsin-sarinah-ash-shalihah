@@ -11,10 +11,10 @@ const icons = [
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram w-full h-full"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram w-full h-full"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8" />
@@ -56,10 +56,10 @@ const icons = [
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-mail w-full h-full"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="icon icon-tabler icons-tabler-outline icon-tabler-mail w-full h-full"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
@@ -72,7 +72,10 @@ const icons = [
 
 export default function ContactUs() {
   return (
-    <section className="w-full min-h-[50vh] bg-secondary flex flex-col items-center justify-center p-4 gap-8 md:p-10">
+    <section
+      id="contact"
+      className="w-full min-h-[50vh] bg-secondary flex flex-col items-center justify-center p-4 gap-8 md:p-10"
+    >
       <div className="text-center text-white">
         <h2 className="text-3xl md:text-5xl font-dynaPuff font-bold mb-4 tracking-wide">
           Hubungi Kami
@@ -84,7 +87,7 @@ export default function ContactUs() {
       <div className="flex justify-around w-full ">
         {icons.map((item, index) => (
           <div
-            className={` relative overflow-hidden bg-box w-70 h-40 md:h-60 lg:h-70 rounded-4xl flex flex-col items-center justify-center transition-transform duration-300 hover:scale-110 active:scale-95 after:absolute after:inset-0 after:rounded-4xl after:bg-white/30 
+            className={` relative overflow-hidden bg-box w-70 h-40 md:h-60 lg:h-70 rounded-4xl flex flex-col items-center justify-center transition-transform duration-700 hover:scale-110 active:scale-95 after:absolute after:inset-0 after:rounded-4xl after:bg-white/30 
     after:scale-[2.5] after:opacity-0 after:transition-all after:duration-700 
     after:ease-out hover:after:scale-0 hover:after:opacity-100 after:pointer-events-none`}
             key={index}

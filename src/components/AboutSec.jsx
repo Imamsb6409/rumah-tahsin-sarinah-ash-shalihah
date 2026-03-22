@@ -25,10 +25,10 @@ const dataAbout = [
 
 export default function AboutSec() {
   return (
-    <section className="bg-primary h-screen text-head p-4 flex flex-col md:flex-row justify-center md:justify-around items-center gap-y-4 md:items-start  relative overflow-hidden">
+    <section id="about" className="bg-primary h-screen text-head p-4 flex flex-col md:flex-row justify-center md:justify-around items-center gap-y-4 md:items-start  relative overflow-hidden">
       <div className="bg-box/30 absolute -left-16 bottom-16 w-100 h-100 rotate-12"></div>
 
-      <div className="font-dynaPuff text-center md:text-left text-head relative mt-15">
+      <div className="font-dynaPuff text-center md:text-left text-green-500 relative mt-15">
         <h1 className="sm:text-xl lg:text-2xl -mb-3">Rumah tahsin</h1>
         <h1 className="text-6xl lg:text-8xl">SARINAH</h1>
         <h1 className="sm:text-xl lg:text-2xl -mt-3 md:absolute">

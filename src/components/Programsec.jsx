@@ -13,10 +13,13 @@ export default function Programsec() {
   };
 
   return (
-    <section className="bg-primary min-h-screen text-head p-4 flex flex-col relative items-center">
+    <section
+      id="program"
+      className="bg-primary min-h-screen text-head p-4 flex flex-col relative items-center"
+    >
       <div className="bg-box/30 absolute -left-16 bottom-16 w-100 h-100 rotate-12"></div>
 
-      <div className="font-dynaPuff text-center md:text-center text-head relative mt-15">
+      <div className="font-dynaPuff text-center md:text-center text-green-500 relative mt-15">
         <h1 className="sm:text-xl lg:text-2xl -mb-3">Program Pembelajaran</h1>
         <h1 className="text-6xl lg:text-8xl">SARINAH</h1>
       </div>
@@ -28,7 +31,7 @@ export default function Programsec() {
           return (
             <div
               key={index}
-              className="bg-box/30 p-6 rounded-lg shadow-lg h flex flex-col items-center text-center justify-between relative cursor-pointer hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out "
+              className=" bg-box/30 p-6 rounded-lg shadow-lg h flex flex-col items-center text-center justify-between relative cursor-pointer hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out "
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -37,6 +40,10 @@ export default function Programsec() {
                 alt={program.judul}
                 className="w-100 h-auto mb-4"
               />
+              {/* benarkan kode dibawah */}
+              <span className={`absolute top-0 right-0 ${program.warnaType} text-white px-4 py-2 rounded-bl-full text-sm font-bold`}>
+                {program.type}
+              </span>
               <div>
                 <h2 className="text-xl font-bold mb-2">{program.judul}</h2>
 

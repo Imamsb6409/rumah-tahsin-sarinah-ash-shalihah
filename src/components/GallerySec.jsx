@@ -2,14 +2,14 @@ import galleryData from "../data/gallery.json";
 
 export default function GallerySec() {
   return (
-    <section className="min-h-[140vh] w-full bg-primary p-4 md:p-10 flex flex-col gap-8">
+    <section id="gallery" className="min-h-[140vh] w-full bg-primary p-4 md:p-10 flex flex-col gap-8">
       {/* HEADER SECTION */}
-      <div className="text-white">
+      <div className="text-green-500">
         <h1>
-          <span className="text-2xl lg:text-3xl -mb-2 text-center block font-dynaPuff text-sub tracking-widest">
+          <span className="text-2xl lg:text-3xl -mb-2 text-center block font-dynaPuff tracking-widest">
             Galeri Kegiatan
           </span>
-          <span className="text-6xl lg:text-8xl text-center block font-semibold font-dynaPuff text-head tracking-tighter">
+          <span className="text-6xl lg:text-8xl text-center block font-semibold font-dynaPuff tracking-tighter">
             SARINAH
           </span>
         </h1>
