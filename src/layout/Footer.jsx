@@ -136,7 +136,7 @@ export default function Footer() {
      
         <div className="w-full md:w-1/2">
            {/* Find Us */}
-          <div className="text-left ">
+          <div className="text-left">
             <p className="text-xl mb-2 font-semibold">Find Us</p>
             <ul className="text-lg space-y-1">
               <li>

@@ -38,9 +38,11 @@ export default function HeroSec() {
           </p>
         </div>
         <div className="mt-10">
-          <button className="hover:bg-secondary text-white font-quicksand font-semibold text-lg lg:text-lg pl-5 pr-3 py-3 rounded-2xl border-2 border-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out flex justify-center items-center gap-4">
+          <a href="#about">
+            <button className="hover:bg-secondary text-white font-quicksand font-semibold text-lg lg:text-lg pl-5 pr-3 py-3 rounded-2xl border-2 border-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out flex justify-center items-center gap-4">
             Profil Kami {right}
           </button>
+          </a>
         </div>
       </div>
     </section>

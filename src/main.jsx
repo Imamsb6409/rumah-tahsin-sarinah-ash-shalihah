@@ -14,8 +14,8 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/" element={<Main />} />
-          <Route path="/hadist" element={<Hadist />} />
         </Route>
+        <Route path="/hadist" element={<Hadist />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

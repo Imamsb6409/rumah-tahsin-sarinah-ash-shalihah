@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { NavLink } from "react-router";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +65,7 @@ export default function Header() {
       <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
       <path d="M3 6l0 13" />
       <path d="M12 6l0 13" />
-      <path d="M21 6l0 13" />    
+      <path d="M21 6l0 13" />
     </svg>
   );
 
@@ -75,9 +76,12 @@ export default function Header() {
       }`}
     >
       <h1 className="text-lg md:text-2xl font-dynaPuff font-regular">
-        Sarinah Ash-Shalihah
+        RTSarinah
       </h1>
-      <button onClick={toggleMenu} className="ml-auto cursor-pointer flex flex-col items-center">
+      <button
+        onClick={toggleMenu}
+        className="ml-auto cursor-pointer flex flex-col items-center"
+      >
         {iconClose}
         <span className="font-semibold text-sm -mt-2 font-dynaPuff">menu</span>
       </button>
@@ -96,19 +100,10 @@ export default function Header() {
             </button>
             <ul className="flex flex-col items-center font-dynaPuff">
               <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out">
-                <a href="#home">Home</a>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out">
-                <a href="#about">About</a>
-              </li>
-              <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out">
-                <a href="#program">Program</a>
-              </li>
-              <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out">
-                <a href="#gallery">Gallery</a>
-              </li>
-              <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out ">
-                <a href="#contact">Contact</a>
+                <NavLink to="/hadist">Hadist</NavLink>
               </li>
             </ul>
           </motion.nav>
