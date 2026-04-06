@@ -18,9 +18,15 @@ export default function CTA() {
 
       {/* Bagian Tombol */}
       <div className="w-full md:w-auto flex justify-center">
-        <button className="w-full md:w-auto bg-[#89986D] text-white text-xl md:text-2xl lg:text-3xl py-4 md:py-5 px-8 md:px-10 rounded-2xl font-dynaPuff hover:bg-[#647050] transition duration-300 shadow-lg active:scale-95">
-          Daftar Sekarang
-        </button>
+        <a
+          href="https://wa.me/6282260578959?text=Assalamu'alaikum%2C%20saya%20tertarik%20untuk%20mendaftar%20program%20pembelajaran%20di%20Rumah%20Tahsin%20Sarinah%20Ash-Sholihah.%20Mohon%20informasi%20lebih%20lanjut."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="w-full md:w-auto bg-[#89986D] text-white text-xl md:text-2xl lg:text-3xl py-4 md:py-5 px-8 md:px-10 rounded-2xl font-dynaPuff hover:bg-[#647050] transition duration-300 shadow-lg active:scale-95">
+            Daftar Sekarang
+          </button>
+        </a>
       </div>
     </div>
   );

@@ -99,10 +99,10 @@ export default function Header() {
               {iconOpen}
             </button>
             <ul className="flex flex-col items-center font-dynaPuff">
-              <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out">
+              <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out cursor-pointer">
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out">
+              <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out cursor-pointer">
                 <NavLink to="/hadist">Hadist</NavLink>
               </li>
             </ul>

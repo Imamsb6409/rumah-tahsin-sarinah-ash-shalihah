@@ -77,7 +77,7 @@ export default function Footer() {
         {/* Navigation */}
         <div className="text-left w-full md:w-1/2">
           <p className="text-xl mb-2 font-semibold">Navigation</p>
-          <ul className="text-lg tracking-widest space-y-1">
+          <ul className="text-lg tracking-widest space-y-1 cursor-pointer">
             <li>
               <a href="#home" className="hover:underline hover:font-semibold">
                 Home
@@ -119,14 +119,14 @@ export default function Footer() {
           <p className="text-xl mb-2 font-semibold">Pages</p>
           <ul className="text-lg tracking-widest space-y-1">
             <li>
-              <NavLink to="/" className="hover:underline hover:font-semibold">
+              <NavLink to="/" className="hover:underline hover:font-semibold cursor-pointer">
                 Home
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/hadist"
-                className="hover:underline hover:font-semibold"
+                className="hover:underline hover:font-semibold cursor-pointer"
               >
                 Hadist
               </NavLink>
