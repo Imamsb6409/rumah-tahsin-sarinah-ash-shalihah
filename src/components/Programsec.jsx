@@ -21,7 +21,7 @@ export default function Programsec() {
 
       <div className="font-dynaPuff text-center md:text-center text-green-500 relative mt-15">
         <h1 className="sm:text-xl lg:text-2xl -mb-3">Program Pembelajaran</h1>
-        <h1 className="text-6xl lg:text-8xl">SARINAH</h1>
+        <h2 className="text-6xl lg:text-8xl">SARINAH</h2>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
@@ -45,7 +45,7 @@ export default function Programsec() {
                 {program.type}
               </span>
               <div>
-                <h2 className="text-xl font-bold mb-2">{program.judul}</h2>
+                <h3 className="text-xl font-bold mb-2">{program.judul}</h3>
 
                 {isHovered && (
                   <div className="absolute inset-0 bg-black/70 text-white p-4 rounded-lg flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">

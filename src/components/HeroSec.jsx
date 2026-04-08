@@ -31,7 +31,7 @@ export default function HeroSec() {
       <div className="w-full h-screen absolute bottom-0 left-0 bg-linear-to-t from-black/65 via-black/60 to-primary z-10 flex flex-col justify-center items-center text-white gap-4">
         <div className=" font-dynaPuff text-center text-white">
           <h1 className="sm:text-xl lg:text-2xl -mb-3">Rumah tahsin</h1>
-          <h1 className="text-7xl lg:text-9xl ">SARINAH</h1>
+          <h2 className="text-7xl lg:text-9xl ">SARINAH</h2>
           <p className="font-quicksand font-medium text-lg px-6 lg:text-2xl mt-8 text-center max-w-2xl lg:max-w-3xl">
             Rumah tempat umat muslim menuntut ilmu tajweed dan belajar cara
             melafadzkan ayat Al-Quran dengan baik dan benar.

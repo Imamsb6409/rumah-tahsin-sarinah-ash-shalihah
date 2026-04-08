@@ -3,9 +3,9 @@ export default function CTA() {
     <div className="bg-box w-[95%] min-h-70 md:w-[90%] mx-auto py-8 md:py-12 px-6 md:px-12 rounded-4xl flex flex-col md:flex-row items-center justify-between gap-8 shadow-inner">
       {/* Bagian Teks */}
       <div className="w-full md:w-2/3 flex flex-col gap-4 text-center md:text-left">
-        <h2 className="text-3xl md:text-4xl lg:text-4xl font-dynaPuff text-[#647050] tracking-wide leading-tight">
+        <h3 className="text-3xl md:text-4xl lg:text-4xl font-dynaPuff text-[#647050] tracking-wide leading-tight">
           Ingin si kecil lancar membaca Al-Qur’an?
-        </h2>
+        </h3>
         <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
           Bersama Rumah{" "}
           <span className="font-semibold text-[#647050]">
