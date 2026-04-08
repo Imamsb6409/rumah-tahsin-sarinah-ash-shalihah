@@ -1,3 +1,5 @@
+import {NavLink} from 'react-router';
+
 const kata2 = [
     {
     "arabic": "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ",
@@ -15,6 +17,9 @@ export default function Kata2() {
       <p className="text-md md:text-lg text-center mt-4">{kata2[0].arti}</p>
       <p className=" text-sm md:text-md text-center mt-2 italic">{kata2[0].riwayat}</p>
       <div className="w-[70%] mt-2"><hr /></div>
+      <NavLink to="/hadist" className="bg-secondary text-primary py-2 px-4 rounded-md hover:bg-primary hover:text-secondary transition duration-300 mt-4">
+        Hadist lainnya
+      </NavLink>
     </div>
   );
 }

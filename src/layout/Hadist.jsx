@@ -77,7 +77,7 @@ export default function Hadist() {
     <div>
       <div className="min-h-screen items-center justify-center bg-primary pt-22 pb-12">
         <h1 className="text-xl font-semibold ml-4 text-center underline-offset-1 underline">
-          Hadist-Hadist Singkat
+          Hadist-Hadist Pilihan
         </h1>
         <div className="w-full gap-4 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4">
           {dataHadist.map((hadist, index) => (
@@ -95,6 +95,11 @@ export default function Hadist() {
             </div>
           ))}
         </div>
+        <p className="text-center mt-4">
+          <NavLink to="/" className="text-secondary hover:underline">
+            Kembali ke Halaman Utama
+          </NavLink>
+        </p>
       </div>
       <footer className="w-full bg-[#647050] py-8 text-white">
         <div className="container mx-auto flex flex-col md:flex-row items-start justify-between gap-6 px-4">
