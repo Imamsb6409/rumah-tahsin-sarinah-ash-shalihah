@@ -46,7 +46,7 @@ const icons = [
     ),
     link: "mailto:info@rumahtahsintantepi.com",
   },
-    {
+  {
     name: "WhatsApp",
     icon: (
       <svg
@@ -119,7 +119,10 @@ export default function Footer() {
           <p className="text-xl mb-2 font-semibold">Pages</p>
           <ul className="text-lg tracking-widest space-y-1">
             <li>
-              <NavLink to="/" className="hover:underline hover:font-semibold cursor-pointer">
+              <NavLink
+                to="/"
+                className="hover:underline hover:font-semibold cursor-pointer"
+              >
                 Home
               </NavLink>
             </li>
@@ -133,24 +136,19 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-     
+
         <div className="w-full md:w-1/2">
-           {/* Find Us */}
+          {/* Find Us */}
           <div className="text-left">
-            <p className="text-xl mb-2 font-semibold">Find Us</p>
-            <ul className="text-lg space-y-1">
-              <li>
-                <a
-                  href="https://maps.app.goo.gl/7NbsiQadDUm9HKkP7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline hover:font-semibold"
-                >
-                  Panjibuwono Residence, Sriwedari CS 5/15, Babelan – Bekasi
-                  17610📍
-                </a>
-              </li>
-            </ul>
+            <p className="text-xl mb-2   font-semibold">Find Us</p>
+            <a
+              href="https://maps.app.goo.gl/7NbsiQadDUm9HKkP7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline hover:font-semibold text-lg"
+            >
+              Panjibuwono Residence, Sriwedari CS 5/15, Babelan – Bekasi 17610📍
+            </a>
           </div>
           {/* Contact Us */}
           <div className="text-left mt-6 md:mt-0 ">
@@ -169,7 +167,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
           </div>
         </div>
       </div>

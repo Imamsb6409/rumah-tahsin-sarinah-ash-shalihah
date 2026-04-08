@@ -76,7 +76,6 @@ export default function Hadist() {
   return (
     <div>
       <div className="min-h-screen items-center justify-center bg-primary pt-22 pb-12">
-        <Header />
         <h1 className="text-xl font-semibold ml-4 text-center underline-offset-1 underline">
           Hadist-Hadist Singkat
         </h1>

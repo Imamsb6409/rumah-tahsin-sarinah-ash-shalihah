@@ -25,6 +25,7 @@ export default function Header() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    
   };
 
   const iconClose = (
@@ -95,7 +96,7 @@ export default function Header() {
             transition={{ duration: 0.3 }}
             className="bg-secondary text-white p-4 fixed w-62.5 rounded-bl-3xl pt-14 pl-10 top-0 right-0 z-20 flex flex-col items-start"
           >
-            <button onClick={toggleMenu} className="absolute top-4 right-4">
+            <button onClick={toggleMenu} className="absolute top-4 right-9">
               {iconOpen}
             </button>
             <ul className="flex flex-col items-center font-dynaPuff">
