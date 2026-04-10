@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router";
 import blogData from "../data/blogData.json";
-import DalilBox from "../components/dalilBox";
+import DalilBox from "../components/DalilBox";
 
 export default function BlogDetail() {
   const { slug } = useParams();
