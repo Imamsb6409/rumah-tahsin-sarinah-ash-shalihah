@@ -1,5 +1,4 @@
 import dataHadist from "../data/hadist.json";
-import Header from "./Header";
 import { NavLink } from "react-router";
 
 const icons = [
@@ -118,6 +117,14 @@ export default function Hadist() {
                   className="hover:underline hover:font-semibold"
                 >
                   Hadist
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/blog"
+                  className="hover:underline hover:font-semibold"
+                >
+                  Blog
                 </NavLink>
               </li>
             </ul>

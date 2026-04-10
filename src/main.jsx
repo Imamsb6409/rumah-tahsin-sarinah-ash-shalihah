@@ -5,8 +5,10 @@ import { Route, Routes, BrowserRouter } from "react-router";
 
 import "./index.css";
 import App from "./App.jsx";
-import Main from "./layout/Main.jsx";
-import Hadist from "./layout/Hadist.jsx";
+import Main from "./pages/Main.jsx";
+import Hadist from "./pages/Hadist.jsx";
+import BlogList from "./pages/BlogList.jsx";
+import BlogDetail from "./pages/BlogDetail.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -15,8 +17,10 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />}>
           <Route path="/" element={<Main />} />
           <Route path="/hadist" element={<Hadist />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogDetail />}/>
+     
         </Route>
-        
       </Routes>
     </BrowserRouter>
   </StrictMode>,

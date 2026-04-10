@@ -134,6 +134,14 @@ export default function Footer() {
                 Hadist
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/blog"
+                className="hover:underline hover:font-semibold cursor-pointer"
+              >
+                Blog
+              </NavLink>
+            </li>
           </ul>
         </div>
 

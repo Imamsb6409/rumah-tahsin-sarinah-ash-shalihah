@@ -3,7 +3,7 @@ import AboutSec from "../components/AboutSec";
 import ProgramSec from "../components/Programsec";
 import GallerySec from "../components/GallerySec";
 import CTA from "../components/CTA";
-import Footer from "./Footer";
+import Footer from "../layout/Footer";
 import Kata2 from '../components/Kata2';
 
 export default function Main() {

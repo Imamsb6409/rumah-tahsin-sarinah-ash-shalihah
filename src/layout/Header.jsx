@@ -106,6 +106,9 @@ export default function Header() {
               <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out cursor-pointer">
                 <NavLink to="/hadist">Hadist</NavLink>
               </li>
+                 <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out cursor-pointer">
+                <NavLink to="/blog">Blog</NavLink>
+              </li>
             </ul>
           </motion.nav>
         )}
