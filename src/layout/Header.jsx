@@ -25,7 +25,6 @@ export default function Header() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    
   };
 
   const iconClose = (
@@ -73,46 +72,80 @@ export default function Header() {
   return (
     <header
       className={` py-4 px-10 fixed w-full top-0 left-0 z-20 flex justify-between items-center transition-colors duration-300 ${
-        isScrolled ? "text-white bg-black/10" : "text-black"
+        isScrolled ? "text-white bg-black/10" : "text-black bg-white/10"
       }`}
     >
       <h1 className="text-lg md:text-2xl font-dynaPuff font-regular">
         RTSarinah
       </h1>
-      <button
-        onClick={toggleMenu}
-        className="ml-auto cursor-pointer flex flex-col items-center"
-      >
-        {iconClose}
-        <span className="font-semibold text-sm -mt-2 font-dynaPuff">menu</span>
-      </button>
 
-      <AnimatePresence mode="wait">
-        {isOpen && (
-          <motion.nav
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            transition={{ duration: 0.3 }}
-            className="bg-secondary text-white p-4 fixed w-62.5 rounded-bl-3xl pt-14 pl-10 top-0 right-0 z-20 flex flex-col items-start"
-          >
-            <button onClick={toggleMenu} className="absolute top-4 right-9">
-              {iconOpen}
-            </button>
-            <ul className="flex flex-col items-center font-dynaPuff">
-              <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out cursor-pointer">
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out cursor-pointer">
-                <NavLink to="/hadist">Hadist</NavLink>
-              </li>
-                 <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out cursor-pointer">
-                <NavLink to="/blog">Blog</NavLink>
-              </li>
-            </ul>
-          </motion.nav>
-        )}
-      </AnimatePresence>
+      <nav className="hidden md:flex gap-8 font-dynaPuff">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out ${isActive ? "text-secondary" : ""}`
+          }
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/hadist"
+          className={({ isActive }) =>
+            `hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out ${isActive ? "text-secondary" : ""}`
+          }
+        >
+          Hadist
+        </NavLink>
+        <NavLink
+          to="/blog"
+          className={({ isActive }) =>
+            `hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out ${isActive ? "text-secondary" : ""}`
+          }
+        >
+          Blog
+        </NavLink>
+      </nav>
+
+      <div className="flex items-center gap-4">
+        <button className="bg-secondary text-white px-6 py-1 rounded-4xl">
+          <a href="https://wa.me">Let's Talk</a>
+        </button>
+        <button
+          onClick={toggleMenu}
+          className="flex w-max cursor-pointer flex-col items-center"
+        >
+          {iconClose}
+          {/* <span className="font-semibold text-sm -mt-2 font-dynaPuff">menu</span> */}
+        </button>
+
+        <AnimatePresence mode="wait">
+          {isOpen && (
+            <motion.nav
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.3 }}
+              className="bg-secondary text-white p-4 fixed w-62.5 rounded-bl-3xl pt-14 pl-10 top-0 right-0 z-20 flex flex-col items-start"
+            >
+              <button onClick={toggleMenu} className="absolute top-4 right-9">
+                {iconOpen}
+              </button>
+              <ul className="md:hidden flex flex-col items-center font-dynaPuff">
+                <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out cursor-pointer">
+                  <NavLink to="/">Home</NavLink>
+                </li>
+                <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out cursor-pointer">
+                  <NavLink to="/hadist">Hadist</NavLink>
+                </li>
+                <li className="mb-2 hover:text-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out cursor-pointer">
+                  <NavLink to="/blog">Blog</NavLink>
+                </li>
+              </ul>
+              <ul></ul>
+            </motion.nav>
+          )}
+        </AnimatePresence>
+      </div>
     </header>
   );
 }
