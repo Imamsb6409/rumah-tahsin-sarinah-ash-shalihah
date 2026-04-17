@@ -10,13 +10,12 @@ import FaqSec from "../components/FaqSec";
 import CTA from "../components/CTA";
 import Footer from "../layout/Footer";
 
-// Variabel animasi untuk memicu anak-anaknya muncul
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1, // Muncul berurutan satu per satu
+      staggerChildren: 0.1,
     },
   },
 };
@@ -29,15 +28,15 @@ export default function Main() {
       variants={containerVariants}
       className="flex flex-col overflow-x-hidden bg-primary"
     >
-      <HeroSec />
-      <AboutSec />
+      <section id="home"><HeroSec /></section>
+      <section id="about"><AboutSec /></section>
       <StatSec />
-      <ProgramSec />
-      <GallerySec />
-      <InvestmentSec />
+      <section id="program"><ProgramSec /></section>
+      <section id="gallery"><GallerySec /></section>
+      <section id="investasi"><InvestmentSec /></section>
       <TestimonialSec />
-      <FaqSec />
-      <CTA />
+      <section id="faq"><FaqSec /></section>
+      <section id="cta"><CTA /></section>
       <Footer />
     </motion.div>
   );
