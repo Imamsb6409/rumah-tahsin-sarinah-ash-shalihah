@@ -32,7 +32,7 @@ export default function App() {
       <main>
         <Outlet />
       </main>
-
+      
       <FloatingWA />
     </ReactLenis>
   );

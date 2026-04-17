@@ -1,13 +1,26 @@
 import { useParams, NavLink } from "react-router";
-import { motion } from "framer-motion";
-import { ArrowLeft, Quote, BookCheck, Share2 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, Quote, BookCheck, Share2, Check } from "lucide-react";
+import { useState } from "react";
 import blogData from "../data/blogData.json";
 
 export default function BlogDetail() {
   const { slug } = useParams();
+  const [copied, setCopied] = useState(false);
   const blog = blogData.find((b) => b.slug === slug);
 
   if (!blog) return <div className="p-20 text-center font-dynaPuff">Artikel tidak ditemukan...</div>;
+
+  const handleShare = () => {
+    // Mengambil URL saat ini
+    const currentUrl = window.location.href;
+    
+    navigator.clipboard.writeText(currentUrl).then(() => {
+      setCopied(true);
+      // Reset status tombol setelah 2 detik
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
 
   return (
     <div className="bg-primary min-h-screen pt-32 pb-20">
@@ -62,11 +75,33 @@ export default function BlogDetail() {
             </ul>
           </div>
 
+          {/* Bagian Bagikan */}
           <div className="mt-16 pt-8 border-t border-gray-100 flex justify-between items-center">
             <p className="text-sub font-medium">Bagikan ilmu ini:</p>
-            <div className="flex gap-4">
-              <button className="p-3 bg-secondary/10 rounded-full text-secondary hover:bg-secondary hover:text-white transition-colors">
-                <Share2 size={20} />
+            <div className="flex items-center gap-3">
+              {/* Notifikasi popup kecil saat berhasil salin */}
+              <AnimatePresence>
+                {copied && (
+                  <motion.span 
+                    initial={{ opacity: 0, x: 10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0 }}
+                    className="text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-lg"
+                  >
+                    Link disalin!
+                  </motion.span>
+                )}
+              </AnimatePresence>
+
+              <button 
+                onClick={handleShare}
+                className={`p-3 rounded-full transition-all flex items-center gap-2 ${
+                  copied 
+                  ? "bg-green-500 text-white" 
+                  : "bg-secondary/10 text-secondary hover:bg-secondary hover:text-white"
+                }`}
+              >
+                {copied ? <Check size={20} /> : <Share2 size={20} />}
               </button>
             </div>
           </div>

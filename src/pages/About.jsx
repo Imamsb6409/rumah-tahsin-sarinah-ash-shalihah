@@ -7,6 +7,7 @@ import {
   IconChecks,
   IconHeart,
 } from "@tabler/icons-react";
+import Footer from "../layout/Footer";
 
 const stats = [
   { label: "Santri Aktif", value: "50+", icon: <IconUsers size={28} /> },
@@ -73,7 +74,7 @@ export default function About() {
                 className="w-full h-[500px] object-cover"
                 onError={(e) =>
                   (e.target.src =
-                    "/public/tempat.png")
+                    "/tempat.png")
                 }
               />
             </div>
@@ -205,6 +206,7 @@ export default function About() {
           </button>
         </motion.div>
       </section>
+      <Footer/>
     </div>
   );
 }

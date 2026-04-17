@@ -7,6 +7,7 @@ import {
   IconArrowRight,
   IconCircleFilled,
 } from "@tabler/icons-react";
+import Icon from "/public/Favicon.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,7 +68,7 @@ export default function Header() {
         <NavLink to="/" className="flex items-center gap-3 group">
           <div className="relative">
             <div className="w-11 h-11 bg-secondary rounded-2xl flex items-center justify-center text-white shadow-xl rotate-3 group-hover:rotate-0 transition-transform duration-300">
-              <span className="font-dynaPuff text-xl">S</span>
+              <span className="font-dynaPuff text-xl"><img src={Icon} alt="Logo RTSarinah" /></span>
             </div>
             <IconCircleFilled
               size={10}

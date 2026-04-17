@@ -1,56 +1,71 @@
 [
   {
-    "gambar": "program-1.svg",
+    "slug": "membaca-al-quran",
     "judul": "Membaca Al-Quran",
-    "deskripsi": "Membantu anak-anak untuk lancar membaca Al-Quran",
-    "link": "#",
+    "deskripsi": "Membantu anak-anak untuk lancar membaca Al-Quran dengan makhraj yang benar.",
+    "fullDescription": "Program dasar yang difokuskan untuk anak-anak agar mampu mengenal huruf hijaiyah hingga lancar membaca Al-Quran dengan tartil. Menggunakan metode yang ramah anak agar proses belajar terasa menyenangkan.",
+    "materi": ["Pengenalan Huruf Hijaiyah", "Makhrajul Huruf", "Tajwid Dasar", "Latihan Kelancaran"],
+    "jadwal": "Senin - Kamis, 16:00 - 17:30 WIB",
     "type": "anak-anak",
     "warnaType": "bg-green-500"
   },
   {
-    "gambar": "program-2.svg",
+    "slug": "talaqqi-al-quran",
     "judul": "Talaqqi Al-Quran",
-    "deskripsi": "Menalqinkan Al-Quran dengan metode talaqqi",
-    "link": "#",
+    "deskripsi": "Menalqinkan Al-Quran dengan metode talaqqi langsung dari pengajar.",
+    "fullDescription": "Metode talaqqi memungkinkan santri mendengarkan langsung bacaan dari guru dan langsung memperbaikinya. Sangat efektif untuk menjaga ketepatan pengucapan ayat demi ayat.",
+    "materi": ["Simakan Bacaan Guru", "Perbaikan Irama", "Ketepatan Harakat", "Tahsin Surat Pendek"],
+    "jadwal": "Jumat, 16:00 - 18:00 WIB",
     "type": "anak-anak",
     "warnaType": "bg-green-500"
   },
   {
-    "gambar": "program-3.svg",
+    "slug": "setoran-al-quran",
     "judul": "Setoran Al-Quran",
-    "deskripsi": "Mengasah kemampuan mengingat bacaan Al-Quran dengan setoran rutin",
-    "link": "#",
+    "deskripsi": "Mengasah kemampuan mengingat bacaan Al-Quran dengan setoran rutin.",
+    "fullDescription": "Program ini dikhususkan bagi anak-anak yang ingin menjaga dan menambah hafalan. Setiap pertemuan difokuskan pada penguatan daya ingat melalui setoran hafalan baru dan murajaah.",
+    "materi": ["Tahfidz Juz 30", "Murajaah Terpimpin", "Ujian Hafalan Berkala", "Adab Menghafal"],
+    "jadwal": "Setiap Hari, 06:00 - 07:00 WIB",
     "type": "anak-anak",
     "warnaType": "bg-green-500"
   },
   {
-    "gambar": "program-4.svg",
+    "slug": "doa-harian",
     "judul": "Doa Harian",
-    "deskripsi": "Mengajarkan anak-anak cara membaca doa harian dengan benar",
-    "link": "#"
-    ,"type": "anak-anak",
+    "deskripsi": "Mengajarkan anak-anak cara membaca doa harian dengan benar.",
+    "fullDescription": "Membekali anak dengan doa-doa yang dipraktikkan dalam kehidupan sehari-hari, mulai dari doa bangun tidur hingga doa masuk masjid, lengkap dengan adabnya.",
+    "materi": ["Doa Tidur & Bangun", "Doa Makan", "Doa Kedua Orang Tua", "Adab-adab Harian"],
+    "jadwal": "Sabtu, 09:00 - 11:00 WIB",
+    "type": "anak-anak",
     "warnaType": "bg-green-500"
   },
   {
-    "gambar": "program-4.svg",
-    "judul": "Tahsin bersama ummahat ",
-    "deskripsi": "Membimbing para ummahat untuk memperbaiki bacaan Al-Quran dengan metode tahsin dari dasar hingga mahir",
-    "link": "#"
-    ,"type": "ummahat",
+    "slug": "tahsin-ummahat",
+    "judul": "Tahsin bersama Ummahat",
+    "deskripsi": "Membimbing para ummahat untuk memperbaiki bacaan Al-Quran dari dasar.",
+    "fullDescription": "Kelas khusus ibu-ibu yang ingin memperbaiki kualitas bacaan Al-Quran. Belajar mulai dari nol atau memperdalam tajwid agar bisa membimbing anak-anak di rumah.",
+    "materi": ["Tahsin Dasar (Iqra/Nuris)", "Tajwid Lanjutan", "Koreksi Bacaan Shalat", "Tadabbur Singkat"],
+    "jadwal": "Selasa & Kamis, 09:00 - 11:00 WIB",
+    "type": "ummahat",
     "warnaType": "bg-green-800"
   },
   {
-    "gambar": "program-4.svg",
-    "judul": "Setoran hafalan Al-Quran ke masyaikh",
-    "deskripsi": "Mendampingi tilawah al-Quran ataupun setoran hafalan bagi para ummahat dan anak-anak yang sudah mahir, ke masyaikh yang berkompeten",
-    "link": "#"
-    ,"type": "ummahat & anak-anak",
+    "slug": "setoran-masyaikh",
+    "judul": "Setoran Al-Quran ke Masyaikh",
+    "deskripsi": "Setoran hafalan langsung ke masyaikh yang berkompeten.",
+    "fullDescription": "Kesempatan eksklusif bagi santri dan ummahat yang sudah mahir untuk menyetorkan bacaan atau hafalan langsung kepada masyaikh dengan standar sanad.",
+    "materi": ["Setoran Hafalan 30 Juz", "Pengambilan Sanad", "Tahsin Level Tinggi", "Dabit Bacaan"],
+    "jadwal": "Sesuai Perjanjian (Janji Temu)",
+    "type": "ummahat & anak-anak",
     "warnaType": "bg-green-800"
-  },{
-    "gambar": "program-4.svg",
-    "judul": "Belajar fikih anak",
-    "deskripsi": "Memberi pemahaman tentang fikih kepada anak-anak dengan cara yang menyenangkan, seperti fikih wudhu, shalat, dan lain-lain",
-    "link": "#",
+  },
+  {
+    "slug": "fikih-anak",
+    "judul": "Belajar Fikih Anak",
+    "deskripsi": "Memberi pemahaman fikih dasar kepada anak dengan cara menyenangkan.",
+    "fullDescription": "Mengenalkan syariat Islam sejak dini melalui praktik langsung, seperti tata cara wudhu yang benar, gerakan shalat, dan pengetahuan dasar bersuci.",
+    "materi": ["Tata Cara Wudhu", "Praktik Shalat", "Pengenalan Najis", "Zakat & Puasa Dasar"],
+    "jadwal": "Minggu, 10:00 - 12:00 WIB",
     "type": "anak-anak",
     "warnaType": "bg-green-500"
   }

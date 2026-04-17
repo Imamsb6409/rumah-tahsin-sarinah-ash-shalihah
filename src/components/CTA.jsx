@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
+import icon from "/Favicon.png";
 import {
   IconBrandWhatsapp,
   IconCircleCheck,
-  IconSparkles,
   IconArrowRight,
 } from "@tabler/icons-react";
 
@@ -30,7 +30,7 @@ export default function CTA() {
         <div className="bg-head rounded-[4rem] p-10 md:p-20 relative overflow-hidden shadow-2xl shadow-head/20 text-center md:text-left">
           {/* Ikon Dekoratif */}
           <div className="absolute top-10 right-10 text-primary/10 hidden lg:block">
-            <IconSparkles size={120} />
+            <img src={icon} alt="Dekorasi CTA" style={{ width: '100px', height: '100px' }} />
           </div>
 
           <div className="grid lg:grid-cols-2 items-center gap-12 relative z-10">
