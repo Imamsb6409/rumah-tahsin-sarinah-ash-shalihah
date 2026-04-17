@@ -1,49 +1,68 @@
-import HeroImg from "/hero-image-rumah-tahsin.webp";
+import { motion } from "framer-motion";
+import { IconArrowRight,IconArrowDown } from "@tabler/icons-react";
 
 export default function HeroSec() {
-  const right = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M6 9l6 6l6 -6" />
-    </svg>
-  );
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <section id="home" className="bg-primary relative">
-      <div className="">
-        <img
-          src={HeroImg}
-          alt="Hero Image"
-          className="w-full h-screen object-cover object-top"
-        />
-      </div>
-      <div className="w-full h-screen absolute bottom-0 left-0 bg-linear-to-t from-black/65 via-black/60 to-primary z-10 flex flex-col justify-center items-center text-white gap-4">
-        <div className=" font-dynaPuff text-center text-white">
-          <h1 className="sm:text-xl lg:text-2xl -mb-3">Rumah tahsin</h1>
-          <h2 className="text-7xl lg:text-9xl ">SARINAH</h2>
-          <p className="font-quicksand font-medium text-lg px-6 lg:text-2xl mt-8 text-center max-w-2xl lg:max-w-3xl">
-            Rumah tempat umat muslim menuntut ilmu tajweed dan belajar cara
-            melafadzkan ayat Al-Quran dengan baik dan benar.
+    <section className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center pt-24 pb-12 px-6 overflow-hidden">
+      <div className="container mx-auto grid lg:grid-cols-2 items-center gap-6 md:gap-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center lg:text-left z-20"
+        >
+          {/* Responsive Text: text-3xl (HP), text-5xl (Tablet), text-7xl (Desktop) */}
+          <h1 className="font-dynaPuff text-3xl sm:text-5xl lg:text-7xl text-head leading-tight">
+            Belajar Quran <br className="hidden md:block" />
+            <span className="text-sub">Jadi Menyenangkan</span>
+          </h1>
+          <p className="mt-4 text-sm md:text-xl font-quicksand text-gray-600 max-w-md mx-auto lg:mx-0">
+            Membangun generasi beraqidah lurus dan fasih berinteraksi dengan
+            Al-Qur'an sejak dini.
           </p>
-        </div>
-        <div className="mt-10">
-          <a href="#about">
-            <button className="hover:bg-secondary text-white font-quicksand font-semibold text-lg lg:text-lg pl-5 pr-3 py-3 rounded-2xl border-2 border-[#4b533c] hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out flex justify-center items-center gap-4">
-            Profil Kami {right}
-          </button>
-          </a>
-        </div>
+          <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+            <motion.button
+             whileHover={{scale:1.02}}
+             whileTap={{scale:0.95}} className="w-full sm:w-auto px-8 py-4 bg-secondary text-white rounded-2xl font-bold shadow-xl hover:bg-[#647050] transition-all flex items-center justify-center gap-2 group mx-auto lg:mx-0">
+              Daftar Sekarang
+              <IconArrowRight
+                size={20}
+                className="group-hover:translate-x-1 transition-transform"
+              />
+            </motion.button>
+            <motion.button
+             whileHover={{scale:1.02}}
+             whileTap={{scale:0.95}}
+              className="w-full sm:w-auto px-8 py-4 bg-primary border-2 border-secondary text-black rounded-2xl font-bold shadow-xl hover:bg-secondary/30 transition-all flex items-center justify-center gap-2 group mx-auto lg:mx-0"
+              onClick={() => scrollToSection("program")}
+            >
+              Pelajari Program<IconArrowDown
+                size={20}
+                className="group-hover:translate-y-1 transition-transform"
+              />
+            </motion.button>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="relative order-first lg:order-last z-10"
+        >
+          <img
+            src="/hero-image.webp"
+            alt="Anak Mengaji"
+            className="w-full max-w-[200px] sm:max-w-xs lg:max-w-lg mx-auto drop-shadow-2xl animate-float"
+          />
+        </motion.div>
       </div>
     </section>
   );

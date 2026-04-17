@@ -1,67 +1,91 @@
+import { motion } from "framer-motion";
+import { BookOpen, Users, Star, GraduationCap, ArrowRight } from "lucide-react";
 import programData from "../data/program.json";
-import { useState } from "react";
 
-export default function Programsec() {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
+export default function ProgramSec() {
+  // Variants untuk animasi kontainer
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
+  const cardVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: { y: 0, opacity: 1 }
   };
 
   return (
-    <section
-      id="program"
-      className="bg-primary min-h-screen text-head p-4 flex flex-col relative items-center"
-    >
-      <div className="bg-box/30 absolute -left-16 bottom-16 w-100 h-100 rotate-12"></div>
-
-      <div className="font-dynaPuff text-center md:text-center text-green-500 relative mt-15">
-        <h1 className="sm:text-xl lg:text-2xl -mb-3">Program Pembelajaran</h1>
-        <h2 className="text-6xl lg:text-8xl">SARINAH</h2>
+    <section id="program" className="py-24 bg-primary relative overflow-hidden px-6">
+      {/* Dekorasi Latar Belakang */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-5 pointer-events-none">
+        <div className="absolute top-10 left-10"><BookOpen size={120} /></div>
+        <div className="absolute bottom-10 right-10"><Star size={100} /></div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
-        {programData.map((program, index) => {
-          const imgUrl = `/program-img/${program.gambar}`;
+      <div className="container mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <motion.div 
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            className="inline-block p-3 bg-secondary/20 rounded-2xl text-secondary mb-4"
+          >
+            <GraduationCap size={32} />
+          </motion.div>
+          <h2 className="text-5xl md:text-6xl font-dynaPuff text-head mb-4">Program Unggulan</h2>
+          <p className="font-quicksand text-sub text-xl max-w-2xl mx-auto">
+            Kurikulum yang dirancang khusus untuk mencetak generasi cinta Al-Qur'an dan beraqidah lurus.
+          </p>
+        </div>
 
-          return (
-            <div
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+        animate="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {programData.map((program, index) => (
+            <motion.div
               key={index}
-              className=" bg-box/30 p-6 rounded-lg shadow-lg h flex flex-col items-center text-center justify-between relative cursor-pointer hover:scale-105 active:scale-95 transition-all duration-200 ease-in-out "
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              variants={cardVariants}
+              whileHover={{ y: -12 }}
+              className="bg-white rounded-[3rem] p-8 shadow-xl shadow-secondary/5 border border-secondary/10 flex flex-col h-full group"
             >
-              <img
-                src={imgUrl}
-                alt={program.judul}
-                className="w-100 h-auto mb-4"
-              />
-              {/* benarkan kode dibawah */}
-              <span className={`absolute top-0 right-0 ${program.warnaType} text-white px-4 py-2 rounded-bl-full text-sm font-bold`}>
-                {program.type}
-              </span>
-              <div>
-                <h3 className="text-xl font-bold mb-2">{program.judul}</h3>
-
-                {isHovered && (
-                  <div className="absolute inset-0 bg-black/70 text-white p-4 rounded-lg flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-gray-300">{program.deskripsi}</p>
-                    <a
-                      href={program.link}
-                      className="text-blue-500 hover:text-blue-700 mt-4 inline-block"
-                    >
-                      Pelajari Lebih Lanjut
-                    </a>
-                  </div>
-                )}
+              {/* Badge Kategori */}
+              <div className="flex justify-between items-start mb-6">
+                <div className={`px-4 py-1.5 rounded-full text-white text-xs font-bold uppercase tracking-wider ${program.warnaType}`}>
+                  {program.type}
+                </div>
+                <div className="text-secondary/30 group-hover:text-secondary transition-colors">
+                  {program.type.includes("ummahat") ? <Users size={28} /> : <Star size={28} />}
+                </div>
               </div>
-            </div>
-          );
-        })}
+
+              {/* Konten Utama */}
+              <div className="flex-grow">
+                <h3 className="text-2xl font-dynaPuff text-head mb-4 leading-snug">
+                  {program.judul}
+                </h3>
+                <p className="font-quicksand text-gray-500 leading-relaxed">
+                  {program.deskripsi}
+                </p>
+              </div>
+
+              {/* Action Button */}
+              <div className="mt-8 pt-6 border-t border-gray-50">
+                <a 
+                  href={program.link}
+                  className="flex items-center gap-2 font-bold text-secondary group-hover:gap-4 transition-all"
+                >
+                  Info Selengkapnya 
+                  <ArrowRight size={18} />
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

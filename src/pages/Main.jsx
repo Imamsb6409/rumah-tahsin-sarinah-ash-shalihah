@@ -1,23 +1,44 @@
+import { motion } from "framer-motion";
 import HeroSec from "../components/HeroSec";
 import AboutSec from "../components/AboutSec";
-import ProgramSec from "../components/Programsec";
+import StatSec from "../components/StatSec";
+import ProgramSec from "../components/ProgramSec";
 import GallerySec from "../components/GallerySec";
+import InvestmentSec from "../components/InvestmentSec";
+import TestimonialSec from "../components/TestimonialSec";
+import FaqSec from "../components/FaqSec";
 import CTA from "../components/CTA";
 import Footer from "../layout/Footer";
-import Kata2 from '../components/Kata2';
+
+// Variabel animasi untuk memicu anak-anaknya muncul
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, // Muncul berurutan satu per satu
+    },
+  },
+};
 
 export default function Main() {
   return (
-    <>
-      <div className="w-full min-h-screen pb-15 bg-primary relative">
-        <HeroSec />
-        <AboutSec />
-        <Kata2 />
-        <ProgramSec />
-        <GallerySec />
-        <CTA />
-      </div>
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className="flex flex-col overflow-x-hidden bg-primary"
+    >
+      <HeroSec />
+      <AboutSec />
+      <StatSec />
+      <ProgramSec />
+      <GallerySec />
+      <InvestmentSec />
+      <TestimonialSec />
+      <FaqSec />
+      <CTA />
       <Footer />
-    </>
+    </motion.div>
   );
 }

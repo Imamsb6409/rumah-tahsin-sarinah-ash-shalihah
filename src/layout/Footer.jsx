@@ -1,188 +1,88 @@
 import { NavLink } from "react-router";
-
-const icons = [
-  {
-    name: "Instagram",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8" />
-        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-        <path d="M16.5 7.5v.01" />
-      </svg>
-    ),
-    link: "https://www.instagram.com/rt_sarinah_ash_shalihah/",
-  },
-  {
-    name: "Email",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="icon icon-tabler icons-tabler-outline icon-tabler-mail"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
-        <path d="M3 7l9 6l9 -6" />
-      </svg>
-    ),
-    link: "mailto:info@rumahtahsintantepi.com",
-  },
-  {
-    name: "WhatsApp",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-        <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-      </svg>
-    ),
-    link: "https://wa.me/6282260578959",
-  },
-];
+import { 
+  IconBrandInstagram, 
+  IconBrandWhatsapp, 
+  IconMail, 
+  IconMapPin, 
+  IconChevronRight,
+  IconClock
+} from "@tabler/icons-react";
 
 export default function Footer() {
-  return (
-    <footer className="w-full bg-[#647050] py-8 text-white">
-      <div className="container mx-auto flex flex-col md:flex-row items-start justify-between gap-6 px-4">
-        {/* Navigation */}
-        <div className="text-left w-full md:w-1/2">
-          <p className="text-xl mb-2 font-semibold">Navigation</p>
-          <ul className="text-lg tracking-widest space-y-1 cursor-pointer">
-            <li>
-              <a href="#home" className="hover:underline hover:font-semibold">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="hover:underline hover:font-semibold">
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#program"
-                className="hover:underline hover:font-semibold"
-              >
-                Program
-              </a>
-            </li>
-            <li>
-              <a
-                href="#gallery"
-                className="hover:underline hover:font-semibold"
-              >
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="hover:underline hover:font-semibold"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-        {/* pages */}
-        <div className="text-left w-full md:w-1/2">
-          <p className="text-xl mb-2 font-semibold">Pages</p>
-          <ul className="text-lg tracking-widest space-y-1">
-            <li>
-              <NavLink
-                to="/"
-                className="hover:underline hover:font-semibold cursor-pointer"
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/hadist"
-                className="hover:underline hover:font-semibold cursor-pointer"
-              >
-                Hadist
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/blog"
-                className="hover:underline hover:font-semibold cursor-pointer"
-              >
-                Blog
-              </NavLink>
-            </li>
-          </ul>
-        </div>
+  const currentYear = new Date().getFullYear();
 
-        <div className="w-full md:w-1/2">
-          {/* Find Us */}
-          <div className="text-left">
-            <p className="text-xl mb-2   font-semibold">Find Us</p>
-            <a
-              href="https://maps.app.goo.gl/7NbsiQadDUm9HKkP7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline hover:font-semibold text-lg"
-            >
-              Panjibuwono Residence, Sriwedari CS 5/15, Babelan – Bekasi 17610📍
+  return (
+    <footer className="bg-head text-white pt-20 pb-10 px-6">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+        
+        {/* Kolom 1: Brand & Bio */}
+        <div className="space-y-6">
+          <h2 className="text-3xl font-dynaPuff">RTSarinah</h2>
+          <p className="font-quicksand text-white/80 leading-relaxed">
+            Membentuk generasi beraqidah lurus dan fasih berinteraksi dengan Al-Qur'an melalui metode yang menyenangkan.
+          </p>
+          <div className="flex gap-4">
+            <a href="#" className="p-3 bg-white/10 rounded-2xl hover:bg-white hover:text-head transition-all">
+              <IconBrandInstagram size={24} />
+            </a>
+            <a href="#" className="p-3 bg-white/10 rounded-2xl hover:bg-white hover:text-head transition-all">
+              <IconBrandWhatsapp size={24} />
             </a>
           </div>
-          {/* Contact Us */}
-          <div className="text-left mt-6 md:mt-0 ">
-            <p className="text-xl mb-2 font-semibold">Contact Us</p>
-            <ul className="text-lg space-y-1 flex gap-x-2">
-              {icons.map((item, index) => (
-                <li key={index}>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline hover:font-semibold"
-                  >
-                    {item.icon}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        </div>
+
+        {/* Kolom 2: Tautan Cepat */}
+        <div className="space-y-6">
+          <h3 className="text-xl font-dynaPuff">Navigasi</h3>
+          <ul className="space-y-4 font-quicksand">
+            {["Home", "Hadist", "Blog", "Program"].map((item) => (
+              <li key={item}>
+                <NavLink to={`/${item === "Home" ? "" : item.toLowerCase()}`} className="flex items-center gap-2 hover:translate-x-2 transition-transform opacity-80 hover:opacity-100">
+                  <IconChevronRight size={18} className="text-primary" /> {item}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Kolom 3: Kontak */}
+        <div className="space-y-6">
+          <h3 className="text-xl font-dynaPuff">Kontak Kami</h3>
+          <ul className="space-y-4 font-quicksand opacity-80">
+            <li className="flex items-start gap-3">
+              <IconMapPin className="text-primary shrink-0" size={24} />
+              <span>Panjibuwono Residence, Sriwedari CS 5/15, Babelan, Bekasi.</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <IconMail className="text-primary" size={24} />
+              <span>info@rtsarinah.com</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Kolom 4: Jam Operasional */}
+        <div className="space-y-6">
+          <h3 className="text-xl font-dynaPuff">Waktu Belajar</h3>
+          <div className="bg-white/10 p-6 rounded-[2rem] space-y-3 font-quicksand">
+            <div className="flex justify-between items-center border-b border-white/10 pb-2">
+              <span className="flex items-center gap-2"><IconClock size={18} /> Senin - Jumat</span>
+              <span className="font-bold">14:00 - 17:00</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="flex items-center gap-2"><IconClock size={18} /> Sabtu</span>
+              <span className="font-bold">08:00 - 11:00</span>
+            </div>
           </div>
         </div>
+
       </div>
 
-      {/* Copyright */}
-      <div className="text-center mt-6 text-sm md:text-base">
-        &copy; {new Date().getFullYear()} Rumah Tahsin Sarinah Ash-Sholihah. All
-        rights reserved.
+      <div className="container mx-auto mt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-quicksand opacity-60">
+        <p>© {currentYear} Rumah Tahsin Sarinah Ash-Shalihah. All Rights Reserved.</p>
+        <div className="flex gap-6">
+          <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+          <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+        </div>
       </div>
     </footer>
   );

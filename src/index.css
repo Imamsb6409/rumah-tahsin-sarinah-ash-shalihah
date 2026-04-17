@@ -1,39 +1,100 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
+  /* Warna Existing */
   --color-primary: #f6f0d7;
   --color-secondary: #89986d;
   --color-box: #b8c4a9;
-
   --color-sub: #9cab84;
   --color-head: #89986d;
 
+  /* Font Family */
   --font-dynaPuff: "DynaPuff", cursive;
   --font-inter: "Inter", sans-serif;
   --font-quicksand: "Quicksand", sans-serif;
+  --font-amiri: "Amiri", serif; /* Tambahan untuk Arab */
 
+  /* Animasi Marquee (Tetap dipertahankan jika masih mau dipakai) */
   --animate-marquee: marquee 15s linear infinite;
   --animate-marquee-vertical: marqueeVertical 15s linear infinite;
+  
+  /* Animasi Baru untuk Efek Premium */
+  --animate-bounce-slow: bounce-slow 3s infinite ease-in-out;
+  --animate-float: float 6s ease-in-out infinite;
 }
 
+/* Keyframes */
 @keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes marqueeVertical {
-  0% {
-    transform: translateY(0%);
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Global Styles */
+@layer base {
+  * {
+    @apply border-gray-200;
+    scroll-behavior: smooth;
   }
-  100% {
-    transform: translateY(-50%);
+  
+  body {
+    @apply bg-primary text-gray-800 antialiased overflow-x-hidden;
+  }
+
+  /* Custom Selection Color */
+  ::selection {
+    background-color: #89986d;
+    color: white;
   }
 }
 
-* {
-  scroll-behavior: smooth;
+/* Custom Scrollbar (Biar makin keren) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f0d7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #89986d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #647050;
+}
+
+/* Utility untuk Teks Arab */
+.font-arabic {
+  font-family: var(--font-amiri);
+  direction: rtl;
+  line-height: 1.8;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }

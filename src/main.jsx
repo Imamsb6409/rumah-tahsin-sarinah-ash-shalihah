@@ -9,6 +9,7 @@ import Main from "./pages/Main.jsx";
 import Hadist from "./pages/Hadist.jsx";
 import BlogList from "./pages/BlogList.jsx";
 import BlogDetail from "./pages/BlogDetail.jsx";
+import About from "./pages/About.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,7 +20,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/hadist" element={<Hadist />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogDetail />}/>
-     
+          <Route path="/about" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>
