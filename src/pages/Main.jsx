@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import HeroSec from "../components/HeroSec";
 import AboutSec from "../components/AboutSec";
 import StatSec from "../components/StatSec";
-import ProgramSec from "../components/Programsec";
+import ProgramSec from "../components/ProgramSec";
 import GallerySec from "../components/GallerySec";
 import InvestmentSec from "../components/InvestmentSec";
 import TestimonialSec from "../components/TestimonialSec";
