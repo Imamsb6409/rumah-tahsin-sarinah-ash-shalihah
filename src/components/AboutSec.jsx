@@ -45,7 +45,7 @@ export default function AboutSec() {
           <h3 className="text-2xl font-quicksand font-bold text-sub">
             Ash-Shalihah
           </h3>
-          <p className="font-quicksand text-xl text-sub max-w-xl leading-relaxed">
+          <p className="font-quicksand font-semibold text-xl text-sub max-w-xl leading-relaxed">
             Tempat ternyaman bagi umat muslim menuntut ilmu tajwid dan
             melafadzkan Al-Quran dengan tartil yang sempurna.
           </p>

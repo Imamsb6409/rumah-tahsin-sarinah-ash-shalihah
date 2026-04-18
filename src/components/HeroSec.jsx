@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router";
 import { motion } from "framer-motion";
 import { IconArrowRight, IconArrowDown, IconBook, IconStar } from "@tabler/icons-react";
 import gsap from "gsap";
@@ -58,6 +59,7 @@ export default function HeroSec() {
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+           <a href="#cta">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }} 
@@ -65,7 +67,7 @@ export default function HeroSec() {
             >
               Daftar Sekarang
               <IconArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            </motion.button></a>
             
             <motion.button
               whileHover={{ scale: 1.05 }}

@@ -63,7 +63,7 @@ export default function ProgramSec() {
           <h2 className="text-5xl md:text-6xl font-dynaPuff text-head mb-4">
             Program Unggulan
           </h2>
-          <p className="font-quicksand text-sub text-xl max-w-2xl mx-auto">
+          <p className="font-quicksand text-sub text-xl font-semibold max-w-2xl mx-auto">
             Kurikulum yang dirancang khusus untuk mencetak generasi cinta
             Al-Qur'an dan beraqidah lurus.
           </p>
