@@ -59,15 +59,15 @@ export default function HeroSec() {
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-           <a href="#cta">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }} 
+              onClick={()=> scrollToSection("cta")}
               className="w-full sm:w-auto px-10 py-4 bg-secondary text-white rounded-2xl font-bold shadow-lg shadow-secondary/30 hover:bg-[#647050] transition-all flex items-center justify-center gap-2 group"
             >
               Daftar Sekarang
               <IconArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </motion.button></a>
+            </motion.button>
             
             <motion.button
               whileHover={{ scale: 1.05 }}

@@ -81,7 +81,7 @@ export default function ProgramDetail() {
                   <Clock className="text-secondary" size={20} />
                   <span>{program.jadwal || "Hubungi Admin untuk Jadwal"}</span>
                 </div>
-                <button className="w-full mt-6 py-4 bg-secondary text-white rounded-2xl font-bold shadow-lg shadow-secondary/20 hover:scale-105 transition-transform">
+                <button onClick={() => navigate("/")} className="w-full mt-6 py-4 bg-secondary text-white rounded-2xl font-bold shadow-lg shadow-secondary/20 hover:scale-105 transition-transform">
                   Daftar Sekarang
                 </button>
               </div>
